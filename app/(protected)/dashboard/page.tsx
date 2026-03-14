@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { createClient } from '../../../lib/supabaseClient'
 import { useRouter } from 'next/navigation'
+import RoutineChat from '../components/RoutineChat'
 
 type Task = {
   id: string
@@ -81,6 +82,8 @@ export default function DashboardPage() {
           Sair
         </button>
       </header>
+
+      <RoutineChat />
 
       <div className="flex gap-2 mb-8">
         <input
